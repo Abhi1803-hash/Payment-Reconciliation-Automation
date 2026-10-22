@@ -1,0 +1,41 @@
+name: Daily Payment Reconciliation
+
+on:
+  schedule:
+    - cron: "0 3 * * 1-5"       # 08:30 IST, Monday to Friday
+  workflow_dispatch:
+    inputs:
+      as_of:
+        description: "Reconciliation date (YYYY-MM-DD). Defaults to 2026-10-15 for the sample data."
+        required: false
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: python -m pytest -q
+
+      - name: Generate data (replace with SFTP / warehouse pull in production)
+        run: python src/generate_data.py
+
+      - name: Reconcile
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m src.recon --as-of ${{ github.event.inputs.as_of || '2026-10-15' }}
+
+      - name: Upload exception register
+        uses: actions/upload-artifact@v4
+        with:
+          name: recon-exceptions
+          path: output/

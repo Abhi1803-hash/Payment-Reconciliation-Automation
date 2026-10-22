@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+data/raw/
+data/*.db
+output/*.xlsx
+output/bi_batch_recon.csv
+.env

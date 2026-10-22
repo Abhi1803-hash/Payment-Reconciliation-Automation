@@ -1,0 +1,20 @@
+txn_ref,value_date,narration,credit,debit,rule_category,category,ai_confidence,reason,needs_review,owner,next_action
+STMT0001066,2026-09-04,NEFT RTN-BENE AC CLOSED 563666,0.0,14168.93,PAYOUT_RETURN,PAYOUT_RETURN,,keyword rule,False,Payouts Ops,Contact merchant to update beneficiary account; re-initiate
+STMT0001067,2026-09-04,ADJ DR-SETTLEMENT RECALL REF 429838,0.0,4841.94,REVERSAL,REVERSAL,,keyword rule,False,Settlement Ops,Find the original credit being reversed; re-run matching
+STMT0001068,2026-09-04,NEFT RTN-BENE AC CLOSED 729942,0.0,5436.59,PAYOUT_RETURN,PAYOUT_RETURN,,keyword rule,False,Payouts Ops,Contact merchant to update beneficiary account; re-initiate
+STMT0001590,2026-09-07,IMPS CR-RFND RVSL-MID UNKNOWN,9490.55,0.0,REFUND_REVERSAL,REFUND_REVERSAL,,keyword rule,False,Refunds Ops,Match to failed refund; re-credit customer
+STMT0001591,2026-09-07,BANK CHGS GST ON SVC CHG,0.0,14730.51,BANK_CHARGES,BANK_CHARGES,,keyword rule,False,Finance / AP,Book to bank-charges GL; verify against bank tariff
+STMT0003252,2026-09-10,NEFT CR-SBIN0001707-INT ON NODAL BAL,14590.59,0.0,INTEREST,INTEREST,,keyword rule,False,Treasury,Book to interest-income GL
+STMT0003798,2026-09-11,RVSL OF CR DT 110926 DUP SETTLMNT,0.0,3858.18,REVERSAL,REVERSAL,,keyword rule,False,Settlement Ops,Find the original credit being reversed; re-run matching
+STMT0004331,2026-09-14,RVSL OF CR DT 140926 DUP SETTLMNT,0.0,12805.89,REVERSAL,REVERSAL,,keyword rule,False,Settlement Ops,Find the original credit being reversed; re-run matching
+STMT0004877,2026-09-15,CHGBK DR CASE#396452 DISPUTE DEBIT,0.0,11227.09,CHARGEBACK,CHARGEBACK,,keyword rule,False,Disputes / Risk,Link to dispute case; recover from merchant balance
+STMT0005477,2026-09-16,CHGBK DR CASE#336807 DISPUTE DEBIT,0.0,14471.12,CHARGEBACK,CHARGEBACK,,keyword rule,False,Disputes / Risk,Link to dispute case; recover from merchant balance
+STMT0007087,2026-09-21,RTGS CR-ICIC0000104-MISC CREDIT ADJ,10299.86,0.0,UNIDENTIFIED_CREDIT,UNIDENTIFIED_CREDIT,,keyword rule,True,Settlement Ops,Raise query with bank for remitter details; park in suspense
+STMT0008225,2026-09-23,NEFT RTN-BENE AC CLOSED 749014,0.0,12262.54,PAYOUT_RETURN,PAYOUT_RETURN,,keyword rule,False,Payouts Ops,Contact merchant to update beneficiary account; re-initiate
+STMT0008754,2026-09-24,BY CLG-UNIDENTIFIED CR,4577.71,0.0,UNIDENTIFIED_CREDIT,UNIDENTIFIED_CREDIT,,keyword rule,True,Settlement Ops,Raise query with bank for remitter details; park in suspense
+STMT0008755,2026-09-24,ADJ DR-SETTLEMENT RECALL REF 166009,0.0,602.91,REVERSAL,REVERSAL,,keyword rule,False,Settlement Ops,Find the original credit being reversed; re-run matching
+STMT0008756,2026-09-24,BANK CHGS GST ON SVC CHG,0.0,12436.91,BANK_CHARGES,BANK_CHARGES,,keyword rule,False,Finance / AP,Book to bank-charges GL; verify against bank tariff
+STMT0009296,2026-09-25,BANK CHGS GST ON SVC CHG,0.0,7712.07,BANK_CHARGES,BANK_CHARGES,,keyword rule,False,Finance / AP,Book to bank-charges GL; verify against bank tariff
+STMT0010965,2026-09-30,NEFT CR-HDFC0000001-CHGBK REVERSAL REF 88231,20872.45,0.0,CHARGEBACK,CHARGEBACK,,keyword rule,False,Disputes / Risk,Link to dispute case; recover from merchant balance
+STMT0010966,2026-09-30,RVSL OF CR DT 300926 DUP SETTLMNT,0.0,13096.28,REVERSAL,REVERSAL,,keyword rule,False,Settlement Ops,Find the original credit being reversed; re-run matching
+STMT0012017,2026-10-02,CHGBK DR CASE#180064 DISPUTE DEBIT,0.0,13467.36,CHARGEBACK,CHARGEBACK,,keyword rule,False,Disputes / Risk,Link to dispute case; recover from merchant balance
